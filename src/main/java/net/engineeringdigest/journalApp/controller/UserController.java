@@ -33,7 +33,7 @@ public class UserController {
         if (userInDB != null) {
             userInDB.setUserName(user.getUserName());
             userInDB.setPassword(user.getPassword());
-            userService.saveEntry(userInDB);
+            userService.saveNewUser(userInDB);
         }
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
